@@ -1,25 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 
 //include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
 
 //create your first component
 const Home = () => {
+	const [username, setUserName] = useState("");
 	return (
-		<div>
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
+		<>
+			<div className="input-group">
+				<input
+					type="text"
+					className="form-control"
+					placeholder="Recipient's username"
+					onChange={(event) => {
+						setUserName(event.target.value);
+					}}
+					value={username}
+				/>
+				<button className="btn btn-outline-secondary" type="button">
+					Button
+				</button>
+			</div>
+		</>
 	);
 };
 
