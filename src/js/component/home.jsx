@@ -4,23 +4,36 @@ import React, { useState } from "react";
 
 //create your first component
 const Home = () => {
-	const [username, setUserName] = useState("");
+	const [listname, setListName] = useState("");
+	const [todolist, setTodoList] = useState([]);
+
 	return (
 		<>
 			<div className="input-group">
 				<input
 					type="text"
 					className="form-control"
-					placeholder="Recipient's username"
+					placeholder="Recipient's listname"
 					onChange={(event) => {
-						setUserName(event.target.value);
+						setListName(event.target.value);
 					}}
-					value={username}
+					value={listname}
 				/>
-				<button className="btn btn-outline-secondary" type="button">
-					Button
+				<button
+					onClick={() => {
+						setTodoList([...todolist, listname]);
+						setListName("");
+					}}
+					className="btn btn-outline-secondary"
+					type="button">
+					Add Name
 				</button>
 			</div>
+			<ul>
+				{todolist.map((item, index) => {
+					return <li key={index}>{item}</li>;
+				})}
+			</ul>
 		</>
 	);
 };
