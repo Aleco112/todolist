@@ -6,6 +6,18 @@ import React, { useState } from "react";
 const Home = () => {
 	const [listname, setListName] = useState("");
 	const [todolist, setTodoList] = useState([]);
+	var requestOptions = {
+		method: "GET",
+		redirect: "follow",
+	};
+
+	fetch(
+		"https://assets.breatheco.de/apis/fake/todos/user/Aleco112",
+		requestOptions
+	)
+		.then((response) => response.json())
+		.then((result) => console.log(result))
+		.catch((error) => console.log("error", error));
 
 	return (
 		<>
