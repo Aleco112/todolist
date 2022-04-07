@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 
 const Home = () => {
+	// state for input
 	const [listname, setListName] = useState("");
+	// state for array
 	const [todolist, setTodoList] = useState([]);
 
 	return (
@@ -24,6 +26,7 @@ const Home = () => {
 				/>
 				<button
 					onClick={() => {
+						//check is input is empty 
 						if (listname !== "") {
 							setTodoList([...todolist, listname]);
 							setListName("");
