@@ -4,7 +4,7 @@ const Home = () => {
 	// state for input
 	const [listname, setListName] = useState("");
 	// state for array
-	const [todolist, setTodoList] = useState(["hello", "now", "stop"]);
+	const [todolist, setTodoList] = useState([]);
 
 	return (
 		<>
