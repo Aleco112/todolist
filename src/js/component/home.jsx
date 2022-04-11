@@ -59,6 +59,7 @@ const Home = () => {
 					})}
 				</ul>
 			</main>
+			<span>{todolist.length} item left</span>
 		</>
 	);
 };

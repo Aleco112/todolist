@@ -1,5 +1,4 @@
-
-body{ 
+body {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -8,32 +7,42 @@ body{
 
 }
 
-h1{
+h1 {
     margin: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-style:oblique;
+    font-style: oblique;
+
 }
-.newtodos{
+
+.newtodos {
     display: flex;
     align-items: center;
     justify-content: space-between;
-  
+    border-bottom: 1px solid black;
+    width: 100%;
+    padding: 2px;
+    background-color: gainsboro;
 
-    
 }
-ul{
+
+ul {
     border: 2px solid black;
+    padding: 2px;
+
+
 }
-div{
-    background-color:white;
-    
+
+div {
+    background-color: white;
+
 }
-main{ 
+
+main {
     width: 700px;
     height: 700px;
-    border: 2px solid whitesmoke;
-    
+    margin: 70px;
+    padding-bottom: 0%;
 
 }
